@@ -1,0 +1,386 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enhanced CSS Variables from Reference Design */
+@layer base {
+  :root {
+    /* Master Palette */
+    --inky-blue: #012f35;
+    --peacock: #1b4e54;
+    --true-turquoise: #007787;
+    --plex-blue: #00b3ca;
+    --sky: #a8dcdb;
+    --ecru: #e2dfcc;
+    --apricot: #ffc994;
+    --terra-cotta: #ad3b23;
+    --boysenberry: #96364a;
+    --light-sky: #e7f4f6;
+
+    /* Base Theme Colors */
+    --background: #ffffff;
+    --foreground: var(--inky-blue);
+
+    /* Surface Colors */
+    --card: #ffffff;
+    --card-foreground: var(--inky-blue);
+    --popover: #ffffff;
+    --popover-foreground: var(--inky-blue);
+
+    /* Brand Colors */
+    --primary: var(--plex-blue);
+    --primary-foreground: #ffffff;
+
+    /* Semantic Colors */
+    --secondary: var(--peacock);
+    --secondary-foreground: #ffffff;
+    --muted: var(--ecru);
+    --muted-foreground: var(--peacock);
+    --accent: var(--sky);
+    --accent-foreground: var(--inky-blue);
+
+    /* UI Elements */
+    --destructive: var(--terra-cotta);
+    --destructive-foreground: #ffffff;
+    --border: #cccccc;
+    --input: #ffffff;
+    --ring: var(--plex-blue);
+
+    /* Data Visualization - Vibrant Full Spectrum */
+    --chart-1: #00d4aa; /* Emerald Green */
+    --chart-2: #ff6b6b; /* Coral Red */
+    --chart-3: #a855f7; /* Purple */
+    --chart-4: #f59e0b; /* Amber */
+    --chart-5: #ef4444; /* Rose */
+    --chart-6: #06b6d4; /* Cyan */
+    --chart-7: #8b5cf6; /* Violet */
+    --chart-8: #84cc16; /* Lime */
+    --chart-9: #f97316; /* Orange */
+    --chart-10: #14b8a6; /* Teal */
+    --chart-11: #ec4899; /* Pink */
+    --chart-12: #6366f1; /* Indigo */
+
+    /* Sentiment Colors */
+    --sentiment-negative: var(--terra-cotta);
+    --sentiment-positive: var(--true-turquoise);
+    --sentiment-neutral: var(--ecru);
+
+    /* Element Hierarchy */
+    --text-primary: #012f35;
+    --text-secondary: #1b4e54;
+    --text-tertiary: #666666;
+    --text-quaternary: #cccccc;
+
+    /* Filter Pane */
+    --filter-pane-bg: rgba(168, 220, 219, 0.05);
+    --filter-active: rgba(0, 179, 202, 0.1);
+    --filter-icon: var(--peacock);
+
+    /* Typography */
+    --font-sans: "Segoe UI", system-ui, sans-serif;
+    --font-semibold: "Segoe UI Semibold", system-ui, sans-serif;
+    --font-bold: "Segoe UI Bold", system-ui, sans-serif;
+
+    /* Font Sizes */
+    --text-general: 0.625rem; /* 10pt */
+    --text-tab: 0.75rem; /* 12pt */
+    --text-title: 1.125rem; /* 18pt */
+    --text-kpi: 2.813rem; /* 45pt */
+
+    /* Shadows */
+    --shadow-xs: 0 1px 2px rgba(1, 47, 53, 0.05);
+    --shadow-sm: 0 1px 3px rgba(1, 47, 53, 0.1);
+    --shadow: 0 1px 4px rgba(1, 47, 53, 0.15);
+    --shadow-md: 0 2px 6px rgba(1, 47, 53, 0.15);
+    --shadow-lg: 0 4px 8px rgba(1, 47, 53, 0.15);
+
+    /* Transparency Values */
+    --plex-blue-10: rgba(0, 179, 202, 0.1);
+    --sky-05: rgba(168, 220, 219, 0.05);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(1, 47, 53, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #00b3ca, #007787);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #007787, #1b4e54);
+  }
+}
+
+@layer components {
+  /* Professional Card Components */
+  .card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    transition:
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
+    border-radius: 8px;
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+  }
+
+  .brief-card {
+    @apply card;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 179, 202, 0.03) 0%,
+      rgba(168, 220, 219, 0.02) 100%
+    );
+    border-left: 4px solid var(--primary);
+    padding: 24px;
+  }
+
+  .insight-card {
+    @apply card p-6;
+  }
+
+  .kpi-card {
+    @apply card p-6;
+    transition: all 0.3s ease;
+  }
+
+  .kpi-value {
+    color: var(--primary);
+    font-size: var(--text-kpi);
+    font-family: var(--font-bold);
+    line-height: 1.2;
+  }
+
+  .skill-chip {
+    background-color: var(--filter-active);
+    border: 1px solid var(--border);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: var(--text-tab);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .skill-chip:hover {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    transform: translateY(-1px);
+  }
+
+  .chat-message {
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .chat-message.user {
+    background: linear-gradient(
+      135deg,
+      var(--filter-active) 0%,
+      transparent 100%
+    );
+    border-left: 4px solid var(--primary);
+    margin-left: auto;
+    max-width: 80%;
+  }
+
+  .chat-message.assistant {
+    background: linear-gradient(135deg, var(--sky-05) 0%, transparent 100%);
+    border-left: 4px solid var(--sentiment-positive);
+    max-width: 100%;
+  }
+
+  .scenario-slider {
+    width: 100%;
+    height: 8px;
+    background-color: var(--sky);
+    opacity: 0.3;
+    border-radius: 8px;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .scenario-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Input and Button Styles */
+  .input-container {
+    background-color: var(--input);
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+    border-radius: 12px;
+    padding: 8px;
+  }
+
+  .input-container:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--plex-blue-10);
+  }
+
+  .btn-primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    transition: all 0.2s ease;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: var(--text-tab);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--true-turquoise);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: var(--text-tab);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--filter-active);
+    border-color: var(--primary);
+    transform: translateY(-1px);
+  }
+
+  /* Chart and Data Visualization */
+  .chart-container {
+    @apply card p-6;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.6s ease-out;
+  }
+
+  .chart-container.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-in {
+    animation: slideIn 0.4s ease-out forwards;
+  }
+
+  /* Loading States */
+  .loading-spinner {
+    border: 3px solid var(--border);
+    border-top: 3px solid var(--primary);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1.2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Sentiment Colors */
+  .sentiment-positive {
+    color: var(--sentiment-positive);
+  }
+  .sentiment-negative {
+    color: var(--sentiment-negative);
+  }
+  .sentiment-neutral {
+    color: var(--sentiment-neutral);
+  }
+
+  /* Professional Input Styles */
+  .input-field {
+    background-color: transparent;
+    border: none;
+    color: var(--foreground);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: var(--text-tab);
+    transition: all 0.2s ease;
+    width: 100%;
+    outline: none;
+  }
+
+  /* Layout Alignment - Professional header height */
+  .main-header {
+    height: 64px; /* Standard header height */
+  }
+
+  .input-bar-offset {
+    padding-bottom: 160px; /* Balanced space for the elevated input bar + drawer */
+  }
+
+  .input-field:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--plex-blue-10);
+    outline: none;
+  }
+
+  .input-field::placeholder {
+    color: var(--text-tertiary);
+  }
+}

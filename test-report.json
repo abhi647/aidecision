@@ -1,0 +1,212 @@
+{
+  "timestamp": "2025-08-19T12:37:19.662Z",
+  "totalTests": 33,
+  "passedTests": 17,
+  "failedTests": 16,
+  "results": [
+    {
+      "testName": "App Access",
+      "passed": true,
+      "details": "App loaded successfully. Title: Boardroom Copilot | FMCG Analytics",
+      "timestamp": "2025-08-19T12:37:28.304Z"
+    },
+    {
+      "testName": "Component: Sidebar",
+      "passed": false,
+      "details": "Component not found",
+      "timestamp": "2025-08-19T12:37:34.274Z"
+    },
+    {
+      "testName": "Component: Header",
+      "passed": true,
+      "details": "Component found",
+      "timestamp": "2025-08-19T12:37:34.299Z"
+    },
+    {
+      "testName": "Component: Main Content",
+      "passed": true,
+      "details": "Component found",
+      "timestamp": "2025-08-19T12:37:34.301Z"
+    },
+    {
+      "testName": "Component: Input Container",
+      "passed": true,
+      "details": "Component found",
+      "timestamp": "2025-08-19T12:37:34.304Z"
+    },
+    {
+      "testName": "Color Variable: --chart-1",
+      "passed": true,
+      "details": "Value: #00D4AA",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Variable: --chart-2",
+      "passed": true,
+      "details": "Value: #FF6B6B",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Variable: --chart-3",
+      "passed": true,
+      "details": "Value: #A855F7",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Variable: --chart-4",
+      "passed": true,
+      "details": "Value: #F59E0B",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Variable: --chart-5",
+      "passed": true,
+      "details": "Value: #EF4444",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Variable: --chart-6",
+      "passed": true,
+      "details": "Value: #06B6D4",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Variable: --chart-7",
+      "passed": true,
+      "details": "Value: #8B5CF6",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Variable: --chart-8",
+      "passed": true,
+      "details": "Value: #84CC16",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Variable: --chart-9",
+      "passed": true,
+      "details": "Value: #F97316",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Variable: --chart-10",
+      "passed": true,
+      "details": "Value: #14B8A6",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Variable: --chart-11",
+      "passed": true,
+      "details": "Value: #EC4899",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Variable: --chart-12",
+      "passed": true,
+      "details": "Value: #6366F1",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Color Palette Implementation",
+      "passed": true,
+      "details": "12/12 color variables found",
+      "timestamp": "2025-08-19T12:37:34.310Z"
+    },
+    {
+      "testName": "Chart Test: bar",
+      "passed": false,
+      "details": "Failed to simulate user interaction",
+      "timestamp": "2025-08-19T12:37:34.879Z"
+    },
+    {
+      "testName": "Chart Test: pie",
+      "passed": false,
+      "details": "Failed to simulate user interaction",
+      "timestamp": "2025-08-19T12:37:34.900Z"
+    },
+    {
+      "testName": "Chart Test: line",
+      "passed": false,
+      "details": "Failed to simulate user interaction",
+      "timestamp": "2025-08-19T12:37:35.065Z"
+    },
+    {
+      "testName": "Chart Test: area",
+      "passed": false,
+      "details": "Failed to simulate user interaction",
+      "timestamp": "2025-08-19T12:37:35.081Z"
+    },
+    {
+      "testName": "Chart Test: scatter",
+      "passed": false,
+      "details": "Failed to simulate user interaction",
+      "timestamp": "2025-08-19T12:37:35.098Z"
+    },
+    {
+      "testName": "Chart Test: heatmap",
+      "passed": false,
+      "details": "Failed to simulate user interaction",
+      "timestamp": "2025-08-19T12:37:35.116Z"
+    },
+    {
+      "testName": "Chart Test: radar",
+      "passed": false,
+      "details": "Failed to simulate user interaction",
+      "timestamp": "2025-08-19T12:37:35.130Z"
+    },
+    {
+      "testName": "Chart Test: donut",
+      "passed": false,
+      "details": "Failed to simulate user interaction",
+      "timestamp": "2025-08-19T12:37:35.148Z"
+    },
+    {
+      "testName": "Chart Test: histogram",
+      "passed": false,
+      "details": "Failed to simulate user interaction",
+      "timestamp": "2025-08-19T12:37:35.166Z"
+    },
+    {
+      "testName": "Chart Test: bubble",
+      "passed": false,
+      "details": "Failed to simulate user interaction",
+      "timestamp": "2025-08-19T12:37:35.182Z"
+    },
+    {
+      "testName": "Responsive: Mobile",
+      "passed": false,
+      "details": "Error: this.page.waitForTimeout is not a function",
+      "timestamp": "2025-08-19T12:37:35.621Z"
+    },
+    {
+      "testName": "Responsive: Tablet",
+      "passed": false,
+      "details": "Error: this.page.waitForTimeout is not a function",
+      "timestamp": "2025-08-19T12:37:35.625Z"
+    },
+    {
+      "testName": "Responsive: Desktop",
+      "passed": false,
+      "details": "Error: this.page.waitForTimeout is not a function",
+      "timestamp": "2025-08-19T12:37:35.628Z"
+    },
+    {
+      "testName": "Sidebar Interaction",
+      "passed": false,
+      "details": "No sidebar items found",
+      "timestamp": "2025-08-19T12:37:35.641Z"
+    },
+    {
+      "testName": "Interactivity Tests",
+      "passed": false,
+      "details": "Error: Node is either not clickable or not an Element",
+      "timestamp": "2025-08-19T12:37:35.689Z"
+    }
+  ],
+  "summary": {
+    "successRate": "51.52%",
+    "totalTests": 33,
+    "passed": 17,
+    "failed": 16
+  }
+}
