@@ -48,16 +48,16 @@ export default function LoginPage() {
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-white">
       
       {/* Left Panel: Branding & USPs */}
-      <div className="hidden lg:flex flex-col justify-between p-12 bg-gradient-to-br from-[var(--inky-blue)] to-[var(--peacock)] text-white relative overflow-hidden">
+      <div className="hidden lg:flex flex-col justify-between p-10 bg-gradient-to-br from-[var(--inky-blue)] to-[var(--peacock)] text-white relative overflow-hidden">
         
         {/* Abstract Background Elements */}
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-white opacity-5 blur-[100px]" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-[var(--true-turquoise)] opacity-20 blur-[100px]" />
 
-        <div className="relative z-10">
-          <div className="flex items-center space-x-3 mb-16">
-             <div className="text-[var(--true-turquoise)]">
-               <svg width="40" height="40" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="relative z-10 max-w-sm mx-auto w-full">
+          <div className="flex items-center space-x-3 mb-12">
+             <div className="text-[var(--true-turquoise)] transition-transform hover:scale-105 cursor-pointer">
+               <svg width="32" height="32" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                  {/* Accurately recreating the teal crossed elliptical rings logo */}
                  <path d="M46.7 153.3C18.6 125.2 18.6 79.6 46.7 51.5L153.3 158.1C125.2 186.2 79.6 186.2 46.7 153.3Z" fill="currentColor" opacity="0.9"/>
                  <path d="M153.3 46.7C181.4 74.8 181.4 120.4 153.3 148.5L46.7 41.9C74.8 13.8 120.4 13.8 153.3 46.7Z" fill="currentColor" opacity="0.9"/>
@@ -65,121 +65,121 @@ export default function LoginPage() {
                </svg>
              </div>
              <div>
-               <h1 className="text-3xl font-bold tracking-tight">Boardroom</h1>
-               <p className="text-[var(--true-turquoise)] font-medium tracking-wide uppercase text-xs">Copilot Pro</p>
+               <h1 className="text-2xl font-bold tracking-tight">Boardroom</h1>
+               <p className="text-[var(--true-turquoise)] font-medium tracking-wide uppercase text-[10px]">Copilot Pro</p>
              </div>
           </div>
 
-          <h2 className="text-4xl font-semibold mb-6 leading-tight">
+          <h2 className="text-3xl font-semibold mb-4 leading-tight">
             Decision Intelligence<br />for FMCG Leaders.
           </h2>
-          <p className="text-lg text-white/80 mb-16 max-w-md">
+          <p className="text-base text-white/80 mb-12 max-w-sm">
             Unlock the power of your supply chain and sales data with an AI agent built for the enterprise boardroom.
           </p>
 
-          <div className="space-y-8">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
-                <Activity className="w-6 h-6 text-[var(--true-turquoise)]" />
+          <div className="space-y-6">
+            <div className="flex items-start space-x-3">
+              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
+                <Activity className="w-5 h-5 text-[var(--true-turquoise)]" />
               </div>
               <div>
-                <h3 className="text-xl font-medium mb-1">Real-Time BI Integration</h3>
-                <p className="text-white/70 leading-relaxed text-sm">
-                  Seamlessly connects with Bizom and SAP to read live operational data, bridging the gap between reporting and action.
+                <h3 className="text-lg font-medium mb-1">Real-Time BI Integration</h3>
+                <p className="text-white/70 leading-relaxed text-xs">
+                  Seamlessly connects with Bizom and SAP to read live operational data.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
-                <Target className="w-6 h-6 text-[var(--true-turquoise)]" />
+            <div className="flex items-start space-x-3">
+              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
+                <Target className="w-5 h-5 text-[var(--true-turquoise)]" />
               </div>
               <div>
-                <h3 className="text-xl font-medium mb-1">Automated Root Cause Analysis</h3>
-                <p className="text-white/70 leading-relaxed text-sm">
-                  Instantly decode margin compression and revenue dips using pre-built Price-Volume-Mix (PVM) mathematical models.
+                <h3 className="text-lg font-medium mb-1">Automated Root Cause Analysis</h3>
+                <p className="text-white/70 leading-relaxed text-xs">
+                  Instantly decode margin compression using pre-built PVM mathematical models.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
-                <Maximize2 className="w-6 h-6 text-[var(--true-turquoise)]" />
+            <div className="flex items-start space-x-3">
+              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
+                <Maximize2 className="w-5 h-5 text-[var(--true-turquoise)]" />
               </div>
               <div>
-                <h3 className="text-xl font-medium mb-1">Advanced Scenario Modeling</h3>
-                <p className="text-white/70 leading-relaxed text-sm">
-                  Run complex operations research algorithms to optimize trade spend and distribution planning in seconds.
+                <h3 className="text-lg font-medium mb-1">Advanced Scenario Modeling</h3>
+                <p className="text-white/70 leading-relaxed text-xs">
+                  Run complex operations research algorithms to optimize trade spend in seconds.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="relative z-10 text-sm text-white/50 font-medium">
+        <div className="relative z-10 text-xs text-white/50 font-medium max-w-sm mx-auto w-full">
           Confidential & Proprietary • Seven Billion Analytics
         </div>
       </div>
 
       {/* Right Panel: Login Form */}
-      <div className="flex items-center justify-center p-8 bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] relative">
-        <div className="w-full max-w-md">
+      <div className="flex items-center justify-center p-6 bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] relative">
+        <div className="w-full max-w-sm">
           
           {/* Mobile Logo display */}
-          <div className="lg:hidden text-center mb-10">
-            <div className="inline-flex items-center justify-center text-[var(--peacock)] mb-4">
-               <svg width="48" height="48" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div className="lg:hidden text-center mb-8">
+            <div className="inline-flex items-center justify-center text-[var(--peacock)] mb-3">
+               <svg width="40" height="40" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                  <path d="M46.7 153.3C18.6 125.2 18.6 79.6 46.7 51.5L153.3 158.1C125.2 186.2 79.6 186.2 46.7 153.3Z" fill="currentColor" opacity="0.9"/>
                  <path d="M153.3 46.7C181.4 74.8 181.4 120.4 153.3 148.5L46.7 41.9C74.8 13.8 120.4 13.8 153.3 46.7Z" fill="currentColor" opacity="0.9"/>
                  <path d="M100 65C119.33 65 135 80.67 135 100C135 119.33 119.33 135 100 135C80.67 135 65 119.33 65 100C65 80.67 80.67 65 100 65Z" fill="currentColor"/>
                </svg>
             </div>
-            <h1 className="text-3xl font-bold text-[var(--inky-blue)] tracking-tight">Boardroom</h1>
-            <p className="text-[var(--text-secondary)] font-medium tracking-wide uppercase text-xs">Copilot Pro</p>
+            <h1 className="text-2xl font-bold text-[var(--inky-blue)] tracking-tight">Boardroom</h1>
+            <p className="text-[var(--text-secondary)] font-medium tracking-wide uppercase text-[10px]">Copilot Pro</p>
           </div>
 
           {/* Login Card */}
-          <div className="backdrop-blur-xl bg-white/80 border border-white/60 shadow-2xl rounded-3xl p-8 lg:p-10">
-            <div className="mb-8">
-              <h2 className="text-2xl font-semibold text-[var(--inky-blue)] mb-2">Welcome Back</h2>
-              <p className="text-[var(--text-secondary)] text-sm">Please enter the master password to securely access your strategic analytics workspace.</p>
+          <div className="backdrop-blur-xl bg-white/80 border border-white/60 shadow-xl rounded-[1.5rem] p-6 lg:p-8">
+            <div className="mb-6">
+              <h2 className="text-xl font-semibold text-[var(--inky-blue)] mb-1">Welcome Back</h2>
+              <p className="text-[var(--text-secondary)] text-sm">Please enter the master password.</p>
             </div>
 
-            <form onSubmit={handleLogin} className="space-y-6">
+            <form onSubmit={handleLogin} className="space-y-5">
               <div>
-                <label className="block text-sm font-semibold text-[var(--inky-blue)] mb-2">
+                <label className="block text-xs font-semibold text-[var(--inky-blue)] mb-2 uppercase tracking-wide">
                   Master Password
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
-                    <Lock className="w-5 h-5" />
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                    <Lock className="w-4 h-4" />
                   </div>
                   <input
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 bg-white/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--plex-blue)] focus:border-transparent transition-all shadow-inner"
+                    className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-gray-200 bg-white/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--plex-blue)] focus:border-transparent transition-all shadow-inner"
                     placeholder="••••••••"
                     required
                   />
                 </div>
                 {error && (
-                  <p className="mt-2 text-sm text-red-500 font-medium animate-pulse">{error}</p>
+                  <p className="mt-2 text-xs text-red-500 font-medium animate-pulse">{error}</p>
                 )}
               </div>
 
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[var(--peacock)] to-[var(--true-turquoise)] text-white font-medium hover:shadow-lg hover:from-[var(--inky-blue)] hover:to-[var(--peacock)] transition-all duration-300 flex items-center justify-center group disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full py-2.5 px-4 rounded-xl text-sm bg-gradient-to-r from-[var(--peacock)] to-[var(--true-turquoise)] text-white font-medium hover:shadow-[0_8px_16px_rgba(0,169,157,0.2)] hover:from-[var(--inky-blue)] hover:to-[var(--peacock)] transition-all duration-300 flex items-center justify-center group disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'Verifying...' : 'Access Dashboard'}
-                {!isLoading && <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />}
+                {!isLoading && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
               </button>
             </form>
           </div>
           
-          <p className="lg:hidden text-center mt-8 text-xs text-gray-400 font-medium tracking-wide">
+          <p className="lg:hidden text-center mt-6 text-[10px] text-gray-400 font-medium tracking-wide">
             Confidential & Proprietary • Seven Billion Analytics
           </p>
 
