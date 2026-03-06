@@ -84,7 +84,8 @@ export async function POST(request: NextRequest) {
       try {
         const ctrl = new AbortController();
         const tid = setTimeout(() => ctrl.abort(), 8000);
-        const pythonResponse = await fetch("http://127.0.0.1:8001/api/analyze", {
+        const backendUrl = process.env.PYTHON_API_URL || "http://127.0.0.1:8001";
+        const pythonResponse = await fetch(`${backendUrl}/api/analyze`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query: message }),
@@ -170,7 +171,8 @@ export async function POST(request: NextRequest) {
       queryLower.includes("scenario")
     ) {
       try {
-        const pythonResponse = await fetch("http://127.0.0.1:8001/api/analyze", {
+        const backendUrl = process.env.PYTHON_API_URL || "http://127.0.0.1:8001";
+        const pythonResponse = await fetch(`${backendUrl}/api/analyze`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query: message })
