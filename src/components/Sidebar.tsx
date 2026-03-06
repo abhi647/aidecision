@@ -94,8 +94,12 @@ export default function Sidebar({
           {/* Header */}
           <div className="h-24 px-6 border-b flex items-center shrink-0" style={{ borderColor: 'var(--border)' }}>
             <div className="flex items-center space-x-4">
-              <div className="p-2 bg-gradient-to-br from-[#003B5C] to-[#00A99D] rounded-xl shadow-lg shadow-[#00A99D]/20 transform -rotate-3 hover:rotate-0 transition-transform cursor-pointer">
-                <Sparkles className="w-6 h-6 text-white" />
+              <div className="text-[var(--true-turquoise)] transition-transform hover:scale-105 cursor-pointer">
+                <svg width="36" height="36" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M46.7 153.3C18.6 125.2 18.6 79.6 46.7 51.5L153.3 158.1C125.2 186.2 79.6 186.2 46.7 153.3Z" fill="currentColor" opacity="0.9"/>
+                  <path d="M153.3 46.7C181.4 74.8 181.4 120.4 153.3 148.5L46.7 41.9C74.8 13.8 120.4 13.8 153.3 46.7Z" fill="currentColor" opacity="0.9"/>
+                  <path d="M100 65C119.33 65 135 80.67 135 100C135 119.33 119.33 135 100 135C80.67 135 65 119.33 65 100C65 80.67 80.67 65 100 65Z" fill="currentColor"/>
+                </svg>
               </div>
               <div className="flex flex-col">
                 <h1 className="text-lg font-extrabold tracking-tight leading-none" style={{ color: '#003B5C' }}>
