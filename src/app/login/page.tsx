@@ -117,7 +117,7 @@ export default function LoginPage() {
         </div>
 
         <div className="relative z-10 text-sm text-white/50 font-medium">
-          Confidential & Proprietary • Target Foods
+          Confidential & Proprietary • Seven Billion Analytics
         </div>
       </div>
 
@@ -180,7 +180,7 @@ export default function LoginPage() {
           </div>
           
           <p className="lg:hidden text-center mt-8 text-xs text-gray-400 font-medium tracking-wide">
-            Confidential & Proprietary • Target Foods
+            Confidential & Proprietary • Seven Billion Analytics
           </p>
 
         </div>
